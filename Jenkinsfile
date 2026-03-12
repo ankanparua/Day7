@@ -2,21 +2,21 @@ pipeline {
     agent any
 
     stages {
-        stage('Clone') {
-            steps {
-                git 'https://github.com/yourusername/yourrepo.git'
-            }
-        }
-
         stage('Build') {
             steps {
-                echo "Building project..."
+                echo "Build started from GitHub webhook"
             }
         }
 
         stage('Test') {
             steps {
-                echo "Running tests..."
+                echo "Running tests"
+            }
+        }
+
+        stage('Deploy') {
+            steps {
+                echo "Deployment stage"
             }
         }
     }
