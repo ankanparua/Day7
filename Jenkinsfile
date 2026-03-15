@@ -2,19 +2,19 @@ pipeline {
     agent any
 
     stages {
-        stage('Build') {
+        stage('Building') {
             steps {
                 echo "Build started from GitHub webhook"
             }
         }
 
-        stage('Test') {
+        stage('Testing') {
             steps {
                 echo "Running tests"
             }
         }
 
-        stage('Deploy') {
+        stage('Deploying') {
             steps {
                 echo "Deployment stage"
             }
